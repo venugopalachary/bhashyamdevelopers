@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -440,7 +440,7 @@
                             <input type="text" name="email" id="email" placeholder="Email *">
                             <input style="margin-top :10px" type="tel" pattern="[6789][0-9]{9}" name="phone" id="phone" placeholder="Phone Number *">
                              <textarea style="margin-top :10px" name="message" id="message" placeholder="Message"></textarea>
-                            <input type="submit" style="margin-top :10px">Submit</button>
+                            <input type="submit" style="margin-top :10px" placeholder="Submit">
                         </form>
                         <p class="form-messege"></p>
                     </div>
@@ -609,6 +609,7 @@
          $("#contactForm").submit(function(e){
     
            e.preventDefault();
+           
 
            var name =$('#name').val();
            
@@ -616,43 +617,33 @@
 
            var phone =$('#phone').val();
 
-           var message =$('#message').val();
+           var subject =$('#message').val();
 
-
-
-            var myHeaders = new Headers();
-            myHeaders.append("Content-Type", "application/json");
-
-            var raw = JSON.stringify({
-              "name": name,
-              "email": email,
-              "phone": phone,
-              "display_name": "Website Leads ",
-              "other_fields": {
-                "message": message
-              
-              }
-            });
-
-            var requestOptions = {
-              method: 'POST',
-              headers: myHeaders,
-              body: raw,
-              redirect: 'follow'
+          var settings = {
+              "url": "https://www.privyr.com/api/v1/incoming-leads/0vZfjMQw/HOc0W9Dj#generic-webhook",
+              "method": "POST",
+              "timeout": 0,
+              "headers": {
+                "Content-Type": "application/json"
+              },
+              "data": JSON.stringify({
+                 "name": name,
+                  "email": email,
+                  "phone": phone,
+                  "display_name": "Website Leads ",
+                  "other_fields": {
+                    "message": subject
+                  
+                  }
+              }),
             };
 
-            fetch("https://www.privyr.com/api/v1/incoming-leads/0vZfjMQw/HOc0W9Dj#generic-webhook", requestOptions)
-              .then(response => response.text())
-              .then(result => alert("submited sucessfully"))
-              .catch(error => console.log('error', error));
+            $.ajax(settings).done(function (response) {
+              console.log(response);
+            });
+                      
 
-            document.getElementById("contactForm").reset();
-
-               });
-
-          
-
-
+               }); 
 
 
     });
