@@ -621,37 +621,35 @@
 
 
 
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
 
+            var raw = JSON.stringify({
+              "name": name,
+              "email": email,
+              "phone": phone,
+              "display_name": "Website Leads ",
+              "other_fields": {
+                "message": message
+              
+              }
+            });
 
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
+            var requestOptions = {
+              method: 'POST',
+              headers: myHeaders,
+              body: raw,
+              redirect: 'follow'
+            };
 
-    var raw = JSON.stringify({
-      "name": name,
-      "email": email,
-      "phone": phone,
-      "display_name": "Website Leads ",
-      "other_fields": {
-        "message": message
-      
-      }
-    });
+            fetch("https://www.privyr.com/api/v1/incoming-leads/0vZfjMQw/HOc0W9Dj#generic-webhook", requestOptions)
+              .then(response => response.text())
+              .then(result => alert("submited sucessfully"))
+              .catch(error => console.log('error', error));
 
-    var requestOptions = {
-      method: 'POST',
-      headers: myHeaders,
-      body: raw,
-      redirect: 'follow'
-    };
+            document.getElementById("contactForm").reset();
 
-    fetch("https://www.privyr.com/api/v1/incoming-leads/0vZfjMQw/HOc0W9Dj#generic-webhook", requestOptions)
-      .then(response => response.text())
-      .then(result => alert("submited sucessfully"))
-      .catch(error => console.log('error', error));
-
-    document.getElementById("contactForm").reset();
-
-       });
+               });
 
           
 
