@@ -15,13 +15,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/bhashyam_favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/bhashyam_favicon/favicon-16x16.png">
 
-    <!-------------gallery start--------------------->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-
-    <!------------------gallery end----------------->
-
+   
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Fontawesome css -->
@@ -40,6 +34,18 @@
     <link rel="stylesheet" href="css/circle.css">
     <!-- Main style css -->
     <link rel="stylesheet" href="css/style.css">
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    
+
+  
 
     <!---------Media Queries for phone and email alignment in mobile version-------->
 
@@ -135,41 +141,38 @@
     <!-- Navigation Part End -->
     <!-- Banner Part Start -->
     <section class="banner-part">
-        <div class="swiper-container banner-slider home-one"
-            data-swiper-config='{"loop": true, "effect": "fade", "speed": 800, "autoplay": 5000, "paginationClickable": true }'>
-            <div class="swiper-wrapper">
-                <div class="swiper-slide banner-item" data-bg-image="images/shake_hand.jpg">
-                    <div class="container">
-                        <div class="row d-flex justify-content-center">
-                            <div class="col-xl-12 banner-caption">
-                                <h2 class="brand-color animated" data-animate="fadeInUp">HMDA, DTCP & RERA Approved</h2>
-                                <h1 data-animate="fadeInUp">Premium Villas & Plots For Sale</h1>
-                                <div class="banner-line"></div>
-                                <p data-animate="fadeInUp">Most of our
-                                    layouts are located in west Hyderabad that offer the best Return on Investment (ROI)
-                                    opportunities. Contact us for booking your plot today.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="swiper-slide banner-item" data-bg-image="images/bg/2007422_7626.jpg">
-                    <div class="container">
-                        <div class="row d-flex justify-content-center">
-                            <div class="col-xl-12 banner-caption">
-                                <h2 class="brand-color" data-animate="fadeInUp">One of the popular Developers in
-                                    Hyderabad</h2>
-                                <h1 data-animate="fadeInUp">Welcome to Bhashyam Developers</h1>
-                                <p data-animate="fadeInUp">Bhashyam Developers is a renowned real estate company in
-                                    Hyderabad with over 15 years of experience in developing open villa plots.</p>
-                            </div>
+
+ <!--====== BANNER SECTION START ======-->
+   
+   <section class="services-secton pt-120 ">
+        
+       
+        <div class="container-fluid">
+           
+                
+                       <div class="slider responsive">
+                                    
+                                        <div>
+                                            <img  src="images/bg/bg1.jpg" />
+                                        </div>
+                                    
+                                       <div>
+                                            <img src="images/bg/bg2.jpg" />
+                                        </div>
+                                    
+                                 
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
+              
+                 
         </div>
+        
+        
     </section>
+    <!--====== BANNER SECTION END ======-->
+
+
+
     <!-- Banner Part End -->
     
     <!-- Get Free Site Visit -->
@@ -603,25 +606,13 @@
     </div>
 
     <!--js Library  -->
-    <script src="js/jquery.min.js"></script>
+
     <!--Popper js  -->
     <script src="js/popper.min.js"></script>
-    <!--Bootstrap min js  -->
-    <script src="js/bootstrap.min.js"></script>
-    <!--Plugins   -->
-    <script src="js/plugins.js"></script>
-    <!--Gmap3 js  -->
-    <script src="js/gmap3.min.js"></script>
-    <!--Knob Js  -->
-    <script src="js/jquery.knob.min.js"></script>
-    <!--Appear Js  -->
-    <script src="js/jquery.appear.js"></script>
-    <!--Swipper Runner  -->
-    <script src="js/swiperRunner.min.js"></script>
-    <!--Google map api -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsBrMPsyNtpwKXPPpG54XwJXnyobfMAIc"></script>
-    <!--Custom js  -->
-    <script src="js/custom.js"></script>
+
+    
+
+
     <script>
         $(document).ready(function () {
 
@@ -645,8 +636,56 @@
             }
             $(this).addClass("active");
 
+
+
+            $('.responsive').slick({
+              dots: false,
+              infinite: true,
+              speed: 50,
+              autoplay: true,
+              autoplaySpeed: 2000,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+               prevArrow: false,
+                nextArrow: false,
+              adaptiveHeight: true,
+              responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+              ]
+            });
+
+
         });
     </script>
+
+
+
+ 
 </body>
 
 </html>
