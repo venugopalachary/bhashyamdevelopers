@@ -15,7 +15,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/bhashyam_favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/bhashyam_favicon/favicon-16x16.png">
 
-   
+    <!-------------gallery start--------------------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+
+    <!------------------gallery end----------------->
+
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Fontawesome css -->
@@ -38,14 +44,6 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    
-
-  
 
     <!---------Media Queries for phone and email alignment in mobile version-------->
 
@@ -148,17 +146,17 @@
    <section class="services-secton pt-120 ">
         
        
-        <div class="container-fluid">
+        <div class="container-fluid" style="padding: 0px;">
            
                 
                        <div class="slider responsive">
                                     
                                         <div>
-                                            <img  src="images/bg/bg1.jpg" />
+                                            <img  src="images/bg/bg1.png" />
                                         </div>
                                     
                                        <div>
-                                            <img src="images/bg/bg2.jpg" />
+                                            <img src="images/bg/bg2.png" />
                                         </div>
                                     
                                  
@@ -417,33 +415,7 @@
         </div>
     </section>
 
-    <!-- Experience  Part Start -->
-    <!--<section class="experience-part section-p">-->
-    <!--    <div class="container">-->
-    <!--        <div class="row">-->
-    <!--            <div class="col-md-7">-->
-    <!--                <div class="section-head-2">-->
-    <!--                    <h2>15 Years Of Experience In <span class="white">Various Locations</span></h2>-->
-    <!--                    <h4 class="white">Our Happy Customer</h4>-->
-    <!--                    <p class="white">Bhashyam Developers is a company that offers you and your own house with all-->
-    <!--                        kinds of facilities like complete electricity supply, good water facility, underground-->
-    <!--                        drainages and our business relationship is a house owner who makes your own house dreams-->
-    <!--                        come true</p>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--            <div class="col-md-5 text-center text-lg-left">-->
-    <!--                <div class="video_popup_two">-->
-    <!--                    <div class="video-pop-inner">-->
-    <!--                        <a class="video-btn venobox pop-up" data-autoplay="true" data-vbtype="video"-->
-    <!--                            href=""> <i class="fa fa-play"-->
-    <!--                                aria-hidden="true"></i></a>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--</section>-->
-    <!-- Experience  Part End -->
+  
     
      <!-- Contact bottom area Start -->
     <section class="contuct-bottom">
@@ -606,13 +578,27 @@
     </div>
 
     <!--js Library  -->
-
+    <script src="js/jquery.min.js"></script>
     <!--Popper js  -->
     <script src="js/popper.min.js"></script>
+    <!--Bootstrap min js  -->
+    <script src="js/bootstrap.min.js"></script>
+    <!--Plugins   -->
+    <script src="js/plugins.js"></script>
+    <!--Gmap3 js  -->
+    <script src="js/gmap3.min.js"></script>
+    <!--Knob Js  -->
+    <script src="js/jquery.knob.min.js"></script>
+    <!--Appear Js  -->
+    <script src="js/jquery.appear.js"></script>
+    <!--Swipper Runner  -->
+    <script src="js/swiperRunner.min.js"></script>
+  
+    <!--Custom js  -->
+    <script src="js/custom.js"></script>
 
-    
-
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
         $(document).ready(function () {
 
@@ -636,56 +622,60 @@
             }
             $(this).addClass("active");
 
-
-
-            $('.responsive').slick({
-              dots: false,
-              infinite: true,
-              speed: 50,
-              autoplay: true,
-              autoplaySpeed: 2000,
-              slidesToShow: 1,
-              slidesToScroll: 1,
-               prevArrow: false,
-                nextArrow: false,
-              adaptiveHeight: true,
-              responsive: [
-                {
-                  breakpoint: 1024,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
-                  }
-                },
-                {
-                  breakpoint: 600,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                  }
-                },
-                {
-                  breakpoint: 480,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                  }
-                }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
-              ]
-            });
-
-
         });
     </script>
 
 
 
- 
+    <script>
+    $(document).ready(function () {
+       
+$('.responsive').slick({
+  dots: false,
+  infinite: true,
+  speed: 50,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+   prevArrow: false,
+    nextArrow: false,
+  adaptiveHeight: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+
+
+
+});
+
+</script>
 </body>
 
 </html>
